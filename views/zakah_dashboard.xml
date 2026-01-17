@@ -1,0 +1,45 @@
+<odoo>
+    <record id="view_zakah_dashboard_form" model="ir.ui.view">
+        <field name="name">zakah.dashboard.form</field>
+        <field name="model">zakah.calculation</field>
+        <field name="arch" type="xml">
+            <form string="Zakah Manager Dashboard">
+                <sheet>
+                    <h1>ZAKAH MANAGER DASHBOARD</h1>
+
+                   <group col="2">
+    <field name="inventory_value" readonly="1" string="Inventory Value"/>
+    <field name="cash_value" readonly="1" string="Cash &amp; Bank"/>
+    <field name="receivables_value" string="Receivables"/>
+    <field name="short_term_liabilities" readonly="1" string="Short Term Liabilities"/>
+    <field name="deduct_liabilities" string="Deduct Liabilities?"/>
+    <field name="total_assets" string="Total Zakathable Asset (2.5%) "/>
+    <field name="zakah_due" readonly="1" string="Zakah Due"/>
+</group>
+<button name="print_report" type="object" string="Report" class="btn-primary"/>
+
+
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <record id="action_zakah_dashboard" model="ir.actions.act_window">
+        <field name="name">Zakah Dashboard</field>
+        <field name="res_model">zakah.calculation</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="view_zakah_dashboard_form"/>
+        <field name="res_id" ref="zakah_calculation_record"/>
+        <field name="target">current</field>
+    </record>
+
+    <menuitem id="menu_zakah_root"
+              name="Zakah"
+              sequence="10"/>
+
+    <menuitem id="menu_zakah_dashboard"
+              name="Zakah Dashboard"
+              parent="menu_zakah_root"
+              action="action_zakah_dashboard"
+              sequence="1"/>
+</odoo>

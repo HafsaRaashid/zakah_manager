@@ -1,0 +1,4 @@
+<odoo>
+    <record id="zakah_calculation_record" model="zakah.calculation">
+    </record>
+</odoo>
