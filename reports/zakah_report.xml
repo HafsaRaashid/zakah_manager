@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <record id="report_zakah_summary" model="ir.actions.report">
+      <field name="name">Zakah Summary Report</field>
+      <field name="model">zakah.calculation</field>
+      <field name="report_type">qweb-pdf</field>
+      <field name="report_name">zakah_manager.report_zakah_summary_template</field>
+      <field name="report_file">zakah_manager.report_zakah_summary_template</field>
+      <field name="print_report_name">'Zakah_Summary_Report'</field>
+      <field name="binding_model_id" ref="zakah_manager.model_zakah_calculation"/>
+      <field name="binding_type">report</field>
+  </record>
+</odoo>

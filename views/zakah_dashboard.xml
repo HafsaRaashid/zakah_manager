@@ -8,18 +8,27 @@
                     <h1>ZAKAH MANAGER DASHBOARD</h1>
 
                    <group col="2">
-    <field name="inventory_value" readonly="1" string="Inventory Value"/>
-    <field name="cash_value" readonly="1" string="Cash &amp; Bank"/>
-    <field name="receivables_value" string="Receivables"/>
-    <field name="short_term_liabilities" readonly="1" string="Short Term Liabilities"/>
-    <field name="deduct_liabilities" string="Deduct Liabilities?"/>
-    <field name="total_assets" string="Total Zakathable Asset (2.5%) "/>
-    <field name="zakah_due" readonly="1" string="Zakah Due"/>
-</group>
-<button name="print_report" type="object" string="Report" class="btn-primary"/>
-
-
+                        <field name="inventory_value" readonly="1" string="Inventory Value"/>
+                        <field name="cash_value" readonly="1" string="Cash &amp; Bank"/>
+                        <field name="receivables_value" string="Receivables"/>
+                        <field name="short_term_liabilities" readonly="1" string="Short Term Liabilities"/>
+                        <field name="deduct_liabilities" string="Deduct Liabilities?"/>
+                        <field name="total_assets" string="Total Zakathable Asset (2.5%) "/>
+                        <field name="zakah_due" readonly="1" string="Zakah Due"/>
+                    </group>
+                    <group>
+                        <button
+                            name="%(zakah_manager.report_zakah_summary)d"
+                            string="View Zakah Report"
+                            type="action"
+                            class="btn-primary"
+                        />
+                        <button string="Close" special="cancel"/>
+                    </group>
                 </sheet>
+
+                    
+
             </form>
         </field>
     </record>

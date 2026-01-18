@@ -4,10 +4,11 @@
     'summary': 'Manage Zakah calculations',
     'category': 'Accounting',
     'author': 'Hafsa Raashid',
-    'depends': ['stock', 'account'],
+    'depends': ['base', 'stock', 'account'],
     'data': [
         'views/zakah_dashboard.xml',
-        'views/zakah_report_templates.xml',
+        'reports/zakah_report_template.xml',
+        'reports/zakah_report.xml',
         'data/zakah_data.xml',
         'security/ir.model.access.csv',
     ],

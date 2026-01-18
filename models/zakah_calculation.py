@@ -112,6 +112,3 @@ class ZakahCalculation(models.Model):
                 record.total_assets * zakah_rate
                 if record.total_assets >= nisab else 0.0
             )
-
-    def print_report(self):
-        return self.env.ref('zakah_manager.zakah_summary_report').report_action(self)
